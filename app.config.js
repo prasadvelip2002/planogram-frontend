@@ -14,10 +14,16 @@ export default {
       backgroundColor: "#ffffff",
     },
     updates: {
-      url: "https://u.expo.dev/f58ce436-2a6a-4801-a49b-e06f5ef40168", // ✅ Add this
+      url: "https://u.expo.dev/f58ce436-2a6a-4801-a49b-e06f5ef40168",
     },
-    runtimeVersion: {
-      policy: "appVersion", // ✅ Required for EAS Update
+    runtimeVersion: "1.0.0", // ✅ SET MANUALLY here
+    android: {
+      package: "com.prasadvelip.planogramapp",
+      versionCode: 5,
+      runtimeVersion: "1.0.0", // ✅ SET manually here too
+    },
+    ios: {
+      runtimeVersion: "1.0.0", // ✅ For iOS
     },
     extra: {
       API_BASE_URL: process.env.API_BASE_URL,
@@ -25,12 +31,6 @@ export default {
       eas: {
         projectId: "f58ce436-2a6a-4801-a49b-e06f5ef40168",
       },
-    },
-    android: {
-      package: "com.prasadvelip.planogramapp",
-    },
-    ios: {
-      bundleIdentifier: "com.prasadvelip.planogramapp",
     },
   },
 };
