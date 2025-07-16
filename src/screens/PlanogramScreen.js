@@ -133,9 +133,10 @@ export default function PlanogramScreen() {
       }
 
       const payload = {
-        selectedImageUrls: actualRows.flatMap(row =>
-          row.flatMap(group => group.productImageUrls)
-        ),
+        selectedImageUrls: JSON.stringify(actualRows.flatMap(row =>
+        row.flatMap(group => group.productImageUrls)
+        )),
+
         photoBase64,
         complianceScore: parseFloat(getComplianceScore()),
       };
